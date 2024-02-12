@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        h1 {text-align: center;}
+        
+       p {text-align: center;}
+       div {text-align: center;}
+       
+        </style>
+
+         <meta charset="UTF-8">
+         <title>Movie Recommendation Portal</title>
+         <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+         
+    </head>
+    <marquee> Top-N Movies Recommendations</marquee>
+    <body style="background-color:white;">
+
+        <div class="login">
+            
+            <img src="https://innodatatics.ai/assets/innologo.png">
+            <h1 style="color:red;">Movie Recommendation Engine</h1>
+            <form action ="/guest" method = "post">
+            <br><br>
+            <select name="mn" >
+                <option value="{{game_list[0]}}" selected >{{game_list[0]}}</option>
+                {% for games in game_list[1:] %}
+                  <option value="{{games}}"   name = "mn">{{games}}</option>
+                {% endfor %}
+              </select>
+            <br><br>
+            <input type ="number" name = "tp" placeholder="top recommendation"/>
+            <P><input type = "submit" value = "submit"/></p>
+            </form>
+    
+                </div>
+        </body>
+    </html>   
